@@ -2,6 +2,128 @@
 
 This file contains all the latest changes and updates to Postal.
 
+## [2.4.0](https://github.com/kk8803921130/postal/compare/v2.3.0...2.4.0) (2024-02-22)
+
+
+### Features
+
+* load signing key path from POSTAL_SIGNING_KEY_PATH ([4a46f69](https://github.com/kk8803921130/postal/commit/4a46f690de3010f1ae4d6c17739530a4eae35c09))
+* privacy mode ([15f9671](https://github.com/kk8803921130/postal/commit/15f9671b667cf369255aaa27ee4257267990095c))
+* remove strip_received_headers config option ([ed2e62b](https://github.com/kk8803921130/postal/commit/ed2e62b94fe76d7aeca0ede98f11a1c4f94c5996))
+* support for configuring postal with environment variables ([854aa5e](https://github.com/kk8803921130/postal/commit/854aa5ebc87de692b4691d48759aefd6fae9d133))
+
+
+### Bug Fixes
+
+* add ruby platform to gemfile ([1fceef7](https://github.com/kk8803921130/postal/commit/1fceef7cea76352fd6166fb3f1e8d0ff8591078e))
+* adds new connection pool which will discard failed clients ([54306a9](https://github.com/kk8803921130/postal/commit/54306a974802c2e4d17e0980531e2d0dba08150a)), closes [#2780](https://github.com/kk8803921130/postal/issues/2780)
+* don't use indifferent access for job params ([2bad645](https://github.com/kk8803921130/postal/commit/2bad645d980ad4b712a3c863b5350e4ee2895071)), closes [#2477](https://github.com/kk8803921130/postal/issues/2477) [#2714](https://github.com/kk8803921130/postal/issues/2714) [#2476](https://github.com/kk8803921130/postal/issues/2476) [#2500](https://github.com/kk8803921130/postal/issues/2500)
+* duplicate string before modifying it to prevent frozen string errors ([f0a8aca](https://github.com/kk8803921130/postal/commit/f0a8aca6e10064fb16daefff9e22dcc20a831868))
+* explicitly disable TLS & starttls for unknown SSL modes ([42ab5b3](https://github.com/kk8803921130/postal/commit/42ab5b3a6b21992c89f8479137699dc9090f0ccc)), closes [#2564](https://github.com/kk8803921130/postal/issues/2564)
+* extract x-postal-tag before holding ([6b2bf90](https://github.com/kk8803921130/postal/commit/6b2bf9062d662ede14617c4995ffaacca023a3b1)), closes [#2684](https://github.com/kk8803921130/postal/issues/2684)
+* fix bug with received header in SMTP server ([ba5bfbd](https://github.com/kk8803921130/postal/commit/ba5bfbd6a0af9ea33bedb2948822417bd1a3fbc5))
+* fixed typo (rfc number) ([2f62baa](https://github.com/kk8803921130/postal/commit/2f62baa238fc1102706ee4acf079b7a876b05283))
+* fixes error messages in web ui ([71f51db](https://github.com/kk8803921130/postal/commit/71f51db3c2515addaf8b280667555427d64796be))
+* fixes issue starting application in production mode ([4528a14](https://github.com/kk8803921130/postal/commit/4528a14d273c141e5719f19c3b08c00364b47638))
+* fixes typo in on track domains page ([77bd77b](https://github.com/kk8803921130/postal/commit/77bd77b629fcbc44b8d27deb0d33a457b02309f2))
+* ignore message DB migrations in autoloader ([3fb40e4](https://github.com/kk8803921130/postal/commit/3fb40e4e247893b314e42affa4604a7a71a52c59))
+* mail view encoding issue [#2462](https://github.com/kk8803921130/postal/issues/2462) ([#2596](https://github.com/kk8803921130/postal/issues/2596)) ([59f4478](https://github.com/kk8803921130/postal/commit/59f44781973489817efb5b3435d95d25f44f90ce))
+* match IPv4 mapped IPv6 addresses when searching for SMTP-IP credentials ([8b525d0](https://github.com/kk8803921130/postal/commit/8b525d0381a9e0113af808b9ec2eb47bf78ec60b))
+* move tracking middleware before host authorization ([49cceaa](https://github.com/kk8803921130/postal/commit/49cceaa6ca862965448041279fc439ecba163ff8)), closes [#2415](https://github.com/kk8803921130/postal/issues/2415)
+* re-add reconnect: true to database ([7bc5230](https://github.com/kk8803921130/postal/commit/7bc5230cbaae58fb6f8512d1d1b0e6a2eb989b56))
+* retry mysql connections on message DB pool ([f9f7fb3](https://github.com/kk8803921130/postal/commit/f9f7fb30fee46b661b6dccde4362383ea591532b))
+* upgrade nokogiri ([f05c2e4](https://github.com/kk8803921130/postal/commit/f05c2e4503688e59a5ef513a5a1064d0ebbb5813))
+* use correct method for disconnecting smtp connections ([7c23994](https://github.com/kk8803921130/postal/commit/7c23994d243ec7d9a17ee053f8c3fa8de0a33097))
+* use utc timestamps when determining raw table names ([ce19bf7](https://github.com/kk8803921130/postal/commit/ce19bf7988d522bf46aabf68090751427e286ffc))
+
+
+### Styles
+
+* **rubocop:** disable complexity cops for now ([930cf39](https://github.com/kk8803921130/postal/commit/930cf39dba37401f90e293c938dee07daf3d9a31))
+* **rubocop:** disable Style/SpecialGlobalVars ([be97f43](https://github.com/kk8803921130/postal/commit/be97f4330897f96085eb29ed7019b1a3e50af88e))
+* **rubocop:** disable Style/StringConcatenation cop ([d508772](https://github.com/kk8803921130/postal/commit/d508772a40ef26e5c3a8304aa1f2b8c7985081bd))
+* **rubocop:** Layout/* ([0e0aca0](https://github.com/kk8803921130/postal/commit/0e0aca06c90f6d2f4db1c4090a35c4537c76e13a))
+* **rubocop:** Layout/EmptyLineAfterMagicComment ([0e4ed5c](https://github.com/kk8803921130/postal/commit/0e4ed5ca0393f9a56e1efa7ae377d2e4b876bfe1))
+* **rubocop:** Layout/EmptyLines ([0cf35a8](https://github.com/kk8803921130/postal/commit/0cf35a83926d499a279775bcc32dd4ea79b7a8c9))
+* **rubocop:** Layout/EmptyLinesAroundBlockBody ([cfd8d63](https://github.com/kk8803921130/postal/commit/cfd8d63321d1821aad7fa9d6b8462c3d551aca61))
+* **rubocop:** Layout/LeadingCommentSpace ([59f299b](https://github.com/kk8803921130/postal/commit/59f299b704533488b74075beb8692397eb434aab))
+* **rubocop:** Layout/LineLength ([e142d0d](https://github.com/kk8803921130/postal/commit/e142d0da5fbee19e6f9f1741ff9dee0a2d7dd169))
+* **rubocop:** Layout/MultilineMethodCallBraceLayout ([a5d5ba5](https://github.com/kk8803921130/postal/commit/a5d5ba5326728413bb95456e92c854977d225a7f))
+* **rubocop:** Lint/DuplicateBranch ([a1dc0f7](https://github.com/kk8803921130/postal/commit/a1dc0f77ac69937d7f30c9401608dfbe66987d45))
+* **rubocop:** Lint/DuplicateMethods ([bab6346](https://github.com/kk8803921130/postal/commit/bab6346239e4f50bdd51101c45f3a0cd66f47096))
+* **rubocop:** Lint/IneffectiveAccessModifier ([6ad56ee](https://github.com/kk8803921130/postal/commit/6ad56ee9c9e5bad19b065fcec3ada3280adbb1f4))
+* **rubocop:** Lint/MissingSuper ([4674e63](https://github.com/kk8803921130/postal/commit/4674e63b5ff84307f5b772e870e88109af2daf52))
+* **rubocop:** Lint/RedundantStringCoercion ([12a5ef3](https://github.com/kk8803921130/postal/commit/12a5ef3279bf6c1e5c38bf7e846de1d17bf98c09))
+* **rubocop:** Lint/ShadowedException ([0966b44](https://github.com/kk8803921130/postal/commit/0966b44018bc1e2f131358635776fcc3b75ee8eb))
+* **rubocop:** Lint/ShadowingOuterLocalVariable ([7119e86](https://github.com/kk8803921130/postal/commit/7119e8642dffeee7a27f90145073e45664ea58d3))
+* **rubocop:** Lint/SuppressedException ([278ef08](https://github.com/kk8803921130/postal/commit/278ef0886ac53e6bed15793301dc69c95a37dbde))
+* **rubocop:** Lint/UnderscorePrefixedVariableName ([ec7dcf4](https://github.com/kk8803921130/postal/commit/ec7dcf4f9a0bdb367a90f1a3b35336909ebc60d7))
+* **rubocop:** Lint/UnusedBlockArgument ([ee94e4e](https://github.com/kk8803921130/postal/commit/ee94e4e1a013bbe8fbdd8ef94f15ed0fa20709ac))
+* **rubocop:** Lint/UselessAssignment ([7590a46](https://github.com/kk8803921130/postal/commit/7590a462341bddd412e660db9546ba1909aea9d7))
+* **rubocop:** Naming/FileName ([919a601](https://github.com/kk8803921130/postal/commit/919a60116c5d81ed787061ff4614da4f1e067d4e))
+* **rubocop:** Naming/MemoizedInstanceVariableName ([9563f30](https://github.com/kk8803921130/postal/commit/9563f30c96fba12073e845319b8d79a542d88109))
+* **rubocop:** relax method length and block nexting for now ([b0ac9ef](https://github.com/kk8803921130/postal/commit/b0ac9ef0b96ab78c2961f45b6e9f20f87a6f1d07))
+* **rubocop:** remaining offences ([ec63666](https://github.com/kk8803921130/postal/commit/ec636661d5c4b9e8f48e6f263ffef834acb68b39))
+* **rubocop:** Security/YAMLLoad ([389ea77](https://github.com/kk8803921130/postal/commit/389ea7705047bf8700836137514b2497af3c6c01))
+* **rubocop:** Style/AndOr ([b9f3f31](https://github.com/kk8803921130/postal/commit/b9f3f313f8ec992917bad3a51f0481f89675e935))
+* **rubocop:** Style/ClassAndModuleChildren ([e896f46](https://github.com/kk8803921130/postal/commit/e896f4689a8fc54979f0a6c2b7ce14746856bad6))
+* **rubocop:** Style/For ([04a3483](https://github.com/kk8803921130/postal/commit/04a34831c74a3a44547f93100c35db650bc4eef6))
+* **rubocop:** Style/FrozenStringLiteralComment ([6ab36c0](https://github.com/kk8803921130/postal/commit/6ab36c09c966eb9a8b8ada52155f74d2537977f2))
+* **rubocop:** Style/GlobalStdStream ([75be690](https://github.com/kk8803921130/postal/commit/75be6907483ea25f828461eb790d3f6f46ca683b))
+* **rubocop:** Style/GlobalVars ([157d114](https://github.com/kk8803921130/postal/commit/157d11457c520147807901b75b3ba22d29172f24))
+* **rubocop:** Style/HashEachMethods ([c995027](https://github.com/kk8803921130/postal/commit/c995027ff53962ae49341372f75e2bf43ecde0d2))
+* **rubocop:** Style/HashExcept ([83ac764](https://github.com/kk8803921130/postal/commit/83ac76451071f097e7197f77fc5ad16e9cf58593))
+* **rubocop:** Style/IdenticalConditionalBranches ([6a58ecf](https://github.com/kk8803921130/postal/commit/6a58ecf605250b8fa891cb14fca0c0e0ce0d7eb9))
+* **rubocop:** Style/MissingRespondToMissing ([ffcb707](https://github.com/kk8803921130/postal/commit/ffcb707247fe2a69905aa6e4dc668abeb9924611))
+* **rubocop:** Style/MultilineBlockChain ([c6326a6](https://github.com/kk8803921130/postal/commit/c6326a6524e6d71d23bc2c256f3f9416c38b0846))
+* **rubocop:** Style/MutableConstant ([129dffa](https://github.com/kk8803921130/postal/commit/129dffab9ed8726ca4066e7052adc699129de2d2))
+* **rubocop:** Style/NumericPredicate ([c558f1c](https://github.com/kk8803921130/postal/commit/c558f1c69ce9498564161d8cef3fcb8213103498))
+* **rubocop:** Style/PreferredHashMethods ([013b3ea](https://github.com/kk8803921130/postal/commit/013b3ea9315c14f24b08574d68e1688f33d78b8d))
+* **rubocop:** Style/SafeNavigation ([00a02f2](https://github.com/kk8803921130/postal/commit/00a02f2655b6e3296ad0e7ea9b9872da936b56ed))
+* **rubocop:** Style/SelectByRegexp ([9ce28a4](https://github.com/kk8803921130/postal/commit/9ce28a427fadf6fafd942e009792be4b5539d40d))
+* **rubocop:** Style/StringLiterals ([b4cc812](https://github.com/kk8803921130/postal/commit/b4cc81264c85d5f0061e5b5121a30d7bdcabc189))
+* **rubocop:** Style/WordArray ([bd85920](https://github.com/kk8803921130/postal/commit/bd8592056573d1c6933d753ed50bdf9a7466e761))
+* **rubocop:** update rubocop rules ([6d4dea7](https://github.com/kk8803921130/postal/commit/6d4dea7f7f0145ff2b99cf2505bc70a3e5925256))
+
+
+### Miscellaneous Chores
+
+* add binstubs for bundle and rspec ([41f6cf4](https://github.com/kk8803921130/postal/commit/41f6cf4d909518526af55ecb3fcccfa8fb8e1da2))
+* add script to send html emails to a local SMTP server ([8794a2f](https://github.com/kk8803921130/postal/commit/8794a2f44783658a075a6f3985079ae4743412b1))
+* annotate models ([6214892](https://github.com/kk8803921130/postal/commit/6214892710e21c2aa29a319d5809f7bdf0d50529))
+* **build:** fixes docker login action credentials ([8810856](https://github.com/kk8803921130/postal/commit/88108566f8ab33f1a4263a36a5c1ffc071645ac3))
+* **build:** improve build process, add release please ([#2414](https://github.com/kk8803921130/postal/issues/2414)) ([5222263](https://github.com/kk8803921130/postal/commit/5222263484f2a5889653859db6aeb7438f116357))
+* **github-actions:** add 'docs' label to exclude from staleness checks ([57b72fb](https://github.com/kk8803921130/postal/commit/57b72fb4b7f7fc934cfa23906de65b8f6d6d1978))
+* **github-actions:** add action to close stale issues and PRs ([d90a456](https://github.com/kk8803921130/postal/commit/d90a456dfa661d87e820160d2045c73c765564d2))
+* **github-actions:** allow stale action to be run on demand ([559b08d](https://github.com/kk8803921130/postal/commit/559b08ddd31ecd904fd09c1e2822161b853166b9))
+* **main:** release 2.1.5 ([#2461](https://github.com/kk8803921130/postal/issues/2461)) ([64cab2e](https://github.com/kk8803921130/postal/commit/64cab2e45ff3362f6ede1813d85ebaa913b781d6))
+* **main:** release 2.1.6 ([#2765](https://github.com/kk8803921130/postal/issues/2765)) ([26aae29](https://github.com/kk8803921130/postal/commit/26aae298a469a7b76d12dd8cb9213f904ac08f6d))
+* **main:** release 2.2.0 ([#2766](https://github.com/kk8803921130/postal/issues/2766)) ([ff901e9](https://github.com/kk8803921130/postal/commit/ff901e99f7c51af501606ea0ba9b7866c85fc0a6))
+* **main:** release 2.2.1 ([#2773](https://github.com/kk8803921130/postal/issues/2773)) ([304828a](https://github.com/kk8803921130/postal/commit/304828a672c4913e53e116bab3c558b3f824e7f5))
+* **main:** release 2.2.2 ([#2783](https://github.com/kk8803921130/postal/issues/2783)) ([19e3bc2](https://github.com/kk8803921130/postal/commit/19e3bc20c6f8614f86de5a6ca41635878036767b))
+* **main:** release 2.3.0 ([b8bab1b](https://github.com/kk8803921130/postal/commit/b8bab1bd0ebbfa21654eded38d8cafe68bcb75e3))
+* remove old example messages ([9db781c](https://github.com/kk8803921130/postal/commit/9db781ca174faf26a4f8ed722f0ebc7c9ced2e26)), closes [#2635](https://github.com/kk8803921130/postal/issues/2635) [#2627](https://github.com/kk8803921130/postal/issues/2627)
+* silence message DB migrations during provisioning ([c83601a](https://github.com/kk8803921130/postal/commit/c83601af69f35e338b1f7c10ef7994f74b96f8bf))
+* update release please to include more categories in changelog ([e156c21](https://github.com/kk8803921130/postal/commit/e156c21dee304de7d10c2958c493cce73c2d8fea))
+* upgrade puma ([3f1343b](https://github.com/kk8803921130/postal/commit/3f1343bdb2b80f46da1123f82e60ea70f39f74ae))
+* upgrade rails to 6.1.7.6 ([409a4a2](https://github.com/kk8803921130/postal/commit/409a4a2c6fac80724830f79b6b68c4cf47298d52))
+
+
+### Code Refactoring
+
+* remove explicit autoload ([0f9882f](https://github.com/kk8803921130/postal/commit/0f9882f13204124df630606b1b9e36787c9c4011))
+* remove Postal::Job.perform method ([990b575](https://github.com/kk8803921130/postal/commit/990b575902c45bb1678cc95f53ef3166c4b7092e))
+* remove Postal.database_url ([96ba4b8](https://github.com/kk8803921130/postal/commit/96ba4b8f309cfcd1d605e5c7fc05507b21c78c6f))
+* remove reloading on the smtp server ([c3c304e](https://github.com/kk8803921130/postal/commit/c3c304e98b3274433248792b6403acf63d7a513b))
+
+
+### Tests
+
+* add initial tests for Postal::SMTPServer::Client ([dece1d4](https://github.com/kk8803921130/postal/commit/dece1d487ac2fdce104700939a79a5579b60a0cb))
+* FactoryBot.lint will lint all registered factories ([25d7d66](https://github.com/kk8803921130/postal/commit/25d7d66b4709fe5442d554097a6ef074aeb15f72))
+* remove FACTORIES_EXCLUDED_FROM_LINT ([1cf665a](https://github.com/kk8803921130/postal/commit/1cf665a0cf61d1eae3d08bdadf6fccaab6413023))
+* rename database spec file ([b9edcf5](https://github.com/kk8803921130/postal/commit/b9edcf5b7dda7f4976a9d3f90668bbdacea57350))
+
 ## [2.3.0](https://github.com/postalserver/postal/compare/2.2.2...2.3.0) (2024-02-13)
 
 
